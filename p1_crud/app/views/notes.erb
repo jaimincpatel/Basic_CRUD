@@ -1,0 +1,10 @@
+<div class="container">
+  <% @user.notes.each do |note|%>
+  <li><a href="/notes/<%=note.id%>"><%=note.title%></a><li>
+  <form action="/notes/<%=note.id%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form>
+  <% end %>
+  <a href="/notes/new">New Note</a>
+</div>

@@ -1,0 +1,8 @@
+<div class='container'>
+  <form action="/notes/<%=@note.id%>" method="post">
+    Title<input type="text" name="title" value="<%=@note.title%>"><br>
+    Note<textarea rows="4" cols="50" name="body"><%= @note.body %></textarea><br>
+    <input type="hidden" name="_method" value="put">
+    <input type="submit" value="Edit">
+</form>
+</div>
